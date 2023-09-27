@@ -1,0 +1,26 @@
+
+  <ion-segment (ionChange)="segmentChanged($event)" value="current-weather">
+    <ion-segment-button value="current-weather">
+      <ion-label>
+        current weather
+      </ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="weather-forcast">
+      <ion-label>
+        weather forcast
+      </ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div
+    class="animate__animated animate__slideInUp animate__fast"
+    *ngIf="segment === 'current-weather'"
+  >
+  <app-current-weather></app-current-weather>
+  </div>
+
+  <div
+    class="animate__animated animate__slideInUp animate__fast"
+    *ngIf="segment === 'weather-forcast'"
+  >
+    <app-weather-forcast></app-weather-forcast>
+  </div>
